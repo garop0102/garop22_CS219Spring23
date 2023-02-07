@@ -136,7 +136,19 @@ public class LogicExercises {
      *  blueTicket(6, 1, 4) → 10
      */
     public static int blueTicket(int a, int b, int c) {
-        return -1; // fill in function result
+        int ab = a + b;
+        int bc = b + c;
+        int ac = a + c;
+
+        if (ab == 10 || bc == 10 || ac == 10){
+            return 10;
+        }
+        if (ab == bc + 10 || ab == ac + 10){
+            return 5;
+        }
+        else
+            return 0;
+
     }
 
     /**
@@ -144,13 +156,13 @@ public class LogicExercises {
      * digit that appears in both numbers, such as the 2 in 12 and 23.
      * Reminder: n/10, gives the left digit while the % "mod" n%10 gives
      * the right digit.
-     *
-     *
      *  shareDigit(12, 23) → true
      *  shareDigit(12, 43) → false
      *  shareDigit(12, 44) → false
      */
     public static boolean commonDigit(int x, int y) {
+
+
         return false;
     }
     public static void main(String[] args) {
@@ -192,6 +204,17 @@ public class LogicExercises {
         System.out.println(redTicket(70,2,2));
         System.out.println(redTicket(2,10,10));
         System.out.println(redTicket(2,2,10));
+
+        // test blueTicket
+        System.out.println();
+        System.out.println("blueTicket TEST");
+        System.out.println(blueTicket(3,5,5));
+        System.out.println(blueTicket(22,5,12));
+        System.out.println(blueTicket(12,2,10));
+
+        // test commonDigit
+        System.out.println();
+
 
 
     }
