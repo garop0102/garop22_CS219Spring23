@@ -26,7 +26,6 @@ public class LogicExercises {
      the result is 1. If speed is 81 or more, the result is 2.
      Unless it is your birthday -- on that day, your speed can be
      5 higher in all cases.
-
      caughtSpeeding(60, false) → 0
      caughtSpeeding(65, false) → 1
      caughtSpeeding(65, true) → 0
@@ -103,7 +102,27 @@ public class LogicExercises {
      * redTicket(0, 0, 0) → 5
      */
     public static int redTicket(int a, int b, int c) {
-        return -1; // fill in function result
+        if (a == 2) {
+            if (b == 2) {
+                if (c == 2) {
+                    return 10;
+                }
+            }
+        }
+        if (a == b) {
+            if (b == c) {
+                return 5;
+            }
+        }
+        if (b == c) {
+            return 1;
+
+        }
+        if (a == b) {
+            return 0;
+        }
+
+        return -1;
     }
 
     /**
@@ -164,12 +183,17 @@ public class LogicExercises {
         System.out.println(love6(6,2));
         System.out.println(love6(10,2));
         System.out.println(love6(4,2));
-        System.out.println(love6(1,5));
-        System.out.println(love6(3,3));
-        System.out.println(love6(5,3));
-        System.out.println(love6(6,1));
-        System.out.println(love6(10,4));
-        System.out.println(love6(12,6));
+
+        // test redTicket
+        System.out.println();
+        System.out.println("redTicket TEST");
+        System.out.println(redTicket(2,2,2));
+        System.out.println(redTicket(10,10,10));
+        System.out.println(redTicket(70,2,2));
+        System.out.println(redTicket(2,10,10));
+        System.out.println(redTicket(2,2,10));
+
+
     }
 
 }
