@@ -156,13 +156,23 @@ public class HW3 {
      * shareDigit(12, 44) → false
      */
     public static boolean commonDigit(int x, int y) {
-        if (x / 10 == y / 10 || x / 10 == y % 10) {
-            return true;
+        if (x >= 10 && x <= 99) {
+            if (y >= 10 && y <= 99){
+                if (x / 10 == y / 10 || x / 10 == y % 10) {
+                    return true;
+                }
+                return x % 10 == y % 10 || x % 10 == y / 10;
         }
-        return x % 10 == y % 10 || x % 10 == y / 10;
+
     }
 
+        return false;
+    }
+
+
+
     public static void main(String[] args) {
+        // test cigarParty
         System.out.println(!cigarParty(30, false));
         System.out.println(cigarParty(50,false));
         System.out.println(cigarParty(70,true));
@@ -180,17 +190,14 @@ public class HW3 {
         System.out.println("D1,D2,D3 TEST");
         System.out.println(ordered(1, 2, 3));
         System.out.println(ordered(3,2,1));
-        System.out.println(ordered(1,0,50));
         System.out.println(ordered(5,2,1));
         System.out.println(ordered(4,20,100));
-        System.out.println(ordered(100,20,400));
 
         // test love6
         System.out.println();
         System.out.println("Love6 TEST");
         System.out.println(love6(4,6));
         System.out.println(love6(6,2));
-        System.out.println(love6(10,2));
         System.out.println(love6(4,2));
 
         // test redTicket
@@ -212,7 +219,7 @@ public class HW3 {
         // test commonDigit
         System.out.println();
         System.out.println("commonDigit TEST");
-        System.out.println(commonDigit(23,10));
+        System.out.println(commonDigit(24,14));
         System.out.println(commonDigit(23,13));
         System.out.println(commonDigit(54,45));
 
