@@ -1,6 +1,6 @@
 package Exercises;
 
-public class Ex43 {
+public class Ex4_3 {
     public static void zoop() {
         baffle();
         System.out.print("You wugga ");
