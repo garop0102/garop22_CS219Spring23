@@ -74,11 +74,11 @@ public class HW3 {
      * absolute value of a number.
      */
     public static boolean love6(int a, int b) {
-        if (a == 6 || b == 6) {
+        if (a == Math.abs(6) || b == Math.abs(6)) {
             return true;
-        } else if (a + b == 6)
+        } else if (a + b == Math.abs(6))
             return true;
-        else if (a - b == 6 || b - a == 6) {
+        else if (a - b == Math.abs(6) || b - a == Math.abs(6)) {
             return true;
 
         }
