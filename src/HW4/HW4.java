@@ -30,7 +30,7 @@ public class HW4 {
         }
     }
 
-
+    // function for valid interest rate
     public static double getValidInterestRate(){
         Scanner in = new Scanner(System.in);
 
@@ -59,7 +59,8 @@ public class HW4 {
     }
 
 
-
+    // function for valid
+    // number of times compounded
     public static int getValidCompound(){
         Scanner in = new Scanner(System.in);
 
@@ -86,7 +87,7 @@ public class HW4 {
 
         }
     }
-
+    // function for valid number of years
     public static double getValidNumberOfYears(){
         Scanner in = new Scanner(System.in);
 
@@ -116,7 +117,7 @@ public class HW4 {
     }
 
 
-
+    // call to validation functions
     public static void main(String[] args) {
         System.out.println(getValidInvestment());
         System.out.println(getValidInterestRate());
