@@ -21,7 +21,7 @@ public class HW4 {
                 // check if it is greater than zero
                 double num = in.nextDouble();
                 if (num < 0) {
-                    System.out.println("Error: initial deposit should be" +
+                    System.out.println("Error: initial deposit should be " +
                             "greater than zero. You entered " + num);
                 } else {
                     return num;
@@ -117,12 +117,12 @@ public class HW4 {
     }
 
 
-    // call to validation functions
+    // call to validate functions
     public static void main(String[] args) {
-        System.out.println(getValidInvestment());
-        System.out.println(getValidInterestRate());
-        System.out.println(getValidNumberOfYears());
-        System.out.println(getValidCompound());
+        System.out.println("Initial investment: " + getValidInvestment());
+        System.out.println("Interest rate: " + getValidInterestRate());
+        System.out.println("Number of years of investment: " + getValidNumberOfYears());
+        System.out.println("Number of times compounded per year: " + getValidCompound());
 
     }
 
