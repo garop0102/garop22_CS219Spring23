@@ -9,7 +9,7 @@ public class Util {
  * @param n - number of times of compound per year
  * @return - the final value of the investment
  */
-public static double investment(double c, double r, int t, double n) {
+public static double investment(double c, double r, double t, int n) {
     return c * Math.pow(1+r/n, n*t);
 
 

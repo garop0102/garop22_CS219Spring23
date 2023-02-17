@@ -1,5 +1,7 @@
 package HW4;
 
+import Utilitiy.Util;
+
 import java.util.Scanner;
 
 public class HW4 {
@@ -119,10 +121,20 @@ public class HW4 {
 
     // call to validate functions
     public static void main(String[] args) {
-        System.out.println("Initial investment: " + getValidInvestment());
-        System.out.println("Interest rate: " + getValidInterestRate());
-        System.out.println("Number of years of investment: " + getValidNumberOfYears());
-        System.out.println("Number of times compounded per year: " + getValidCompound());
+        double investment = getValidInvestment();
+        System.out.println("Initial investment: " + investment);
+
+        double interest = getValidInterestRate();
+        System.out.println("Interest rate: " + interest);
+
+        double number_years = getValidNumberOfYears();
+        System.out.println("Number of years of investment: " + number_years);
+
+        int compound = getValidCompound();
+        System.out.println("Number of times compounded per year: " + compound);
+
+        // calculation for investment
+        System.out.printf("%.2f", Util.investment(investment, interest,number_years,compound));
 
     }
 

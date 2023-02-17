@@ -15,7 +15,7 @@ public class VariablesAndTypes {
     //void is the return type
     public static void main(String[] args) {
         System.out.println(Util.f2c(212));
-        System.out.println(Util.investment(1,1,1,1e9));
+        System.out.println(Util.investment(1.0,1,1,(int)1e9));
 
         int x = 7;
         System.out.println(x*x);
