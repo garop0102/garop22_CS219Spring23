@@ -140,7 +140,7 @@ public class MoreLoopExercises {
      * and less than n. If no factors return -1.
      * Notice that this function uses longs and not ints.
      *
-     *  factor(25) =
+     *  factor(25) = 5
      *  factor(59953793) == 7727
      *  factor(1531482031) == -1
      *  factor(7304692485435694493L) == -1;
@@ -150,7 +150,15 @@ public class MoreLoopExercises {
      *           remove it?
      */
     public static long factor(long n) {
-        return -1; // shut up error message
+
+        for (int cnt = 2; cnt <= Math.sqrt(n); cnt++) {
+            if (n % cnt == 0){
+                return cnt;}
+        }
+
+
+        // shut up error message
+        return -1;
     }
 
     /*
@@ -162,7 +170,6 @@ public class MoreLoopExercises {
      * Question: Why is this a void function?
      */
     public static void stars(int n) {
-        // fill in code
     }
 
     /*
@@ -215,7 +222,15 @@ public class MoreLoopExercises {
      *
      */
     public static boolean isPalindrome(int n) {
-        return false; // shut up error message
+        int m = 0;
+        int tmp = n;
+
+        while (n > 0) {
+            m = m * 10 + (n % 10);
+            n = n / 10;
+        }
+        return m == tmp;
+
     }
 
     /*
@@ -277,11 +292,18 @@ public class MoreLoopExercises {
         System.out.println(match("011", "amazing") == 1);
 
         System.out.println(count7s(15673497) == 2);
+        System.out.println(count7s(-74750607));
+        System.out.println(count7s(77197) == 3);
         System.out.println(count7s(777777777) == 9);
         System.out.println(count7s(1307) == 1);
         System.out.println(count7s(7827) == 2);
 
         System.out.println(sum3or5(1000));
+
+        System.out.println(factor(25));
+
+        System.out.println(isPalindrome(1221));
+        System.out.println(!isPalindrome(1234));
 
     }
 }
