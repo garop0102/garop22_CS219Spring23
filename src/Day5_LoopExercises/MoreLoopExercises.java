@@ -101,9 +101,19 @@ public class MoreLoopExercises {
                 cnt_svn++;
             }
         }
-
-
         return cnt_svn;
+    }
+
+    public static int gop7s(int n) {
+        int count = 0;
+        n = Math.abs(n);
+        while (n > 0) {
+            if (n % 10 == 7) {
+                count++;
+            }
+            n = n / 10;
+        }
+        return count;
     }
 
     /*
