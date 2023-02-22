@@ -1,6 +1,6 @@
 package HW4;
 
-import Utilitiy.Util;
+import Utility.Util;
 
 import java.util.Scanner;
 

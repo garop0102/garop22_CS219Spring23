@@ -1,4 +1,4 @@
-package Utilitiy;
+package Utility;
 
 public class Util {
     /**

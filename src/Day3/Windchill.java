@@ -1,6 +1,6 @@
 package Day3;
 
-import Utilitiy.Util;
+import Utility.Util;
 
 import java.util.Scanner;
 

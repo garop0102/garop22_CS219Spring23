@@ -7,7 +7,6 @@ public class MoreLoopExercises {
         // return ch == 'a' || ch == 'i' || ch == 'o' || ch == 'e' ||
         //        ch == 'u' || ch == 'y';
     }
-
     /*
      * You are given two strings - pattern and source.
      * The first string pattern contains only the symbols
@@ -180,6 +179,16 @@ public class MoreLoopExercises {
      * Question: Why is this a void function?
      */
     public static void stars(int n) {
+        int i = 0;
+        char stars = '*';
+        int sum = 0;
+
+        if (n > 0) {
+            for (i = 0; i < n; i++) {
+                System.out.print(stars);
+                sum = i + 1;
+            }
+        }
     }
 
     /*
@@ -198,7 +207,16 @@ public class MoreLoopExercises {
      *  Hint: use the function stars you defined above.
      */
     public static void triangle(int n) {
-        // fill in code
+        int i = 0;
+        char stars = '*';
+        int sum = 0;
+
+        if (n > 0) {
+            for (i = 0; i < n; i++) {
+                sum = i + 1;
+                System.out.println(stars);
+            }
+        }
     }
 
     /*
@@ -315,5 +333,15 @@ public class MoreLoopExercises {
         System.out.println(isPalindrome(1221));
         System.out.println(!isPalindrome(1234));
 
+        stars(4);
+        newline();
+
+
+        triangle(4);
+
+    }
+
+    private static void newline() {
+        System.out.println();
     }
 }

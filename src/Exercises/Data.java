@@ -4,7 +4,7 @@ public class Data {
 
     public static void main(String[] args) {
         String day = "Thursday";
-        int date = 26;
+        int date = 28;
         String month = "January";
         int year = 2023;
 

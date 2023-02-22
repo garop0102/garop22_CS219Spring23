@@ -1,6 +1,6 @@
 package Day2;
 
-import Utilitiy.Util;
+import Utility.Util;
 
 public class VariablesAndTypes {
 
