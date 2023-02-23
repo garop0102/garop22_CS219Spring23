@@ -7,6 +7,9 @@ public class StringPlay {
 
         for (int i = 0; i < s.length(); i++){
             for (int j = 0; j < s.length(); j++) {
+                if (s.charAt(i) == s.charAt(j)){
+                    return true;
+                }
                 // TODO finish as a study problem.
             }
         }
