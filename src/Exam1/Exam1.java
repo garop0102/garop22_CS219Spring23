@@ -3,23 +3,22 @@ package Exam1;
 import java.util.Scanner;
 
 public class Exam1 {
-    public static int printTriangle(int n) {
+    public static char printTriangle(int n) {
         char stars = '*';
         int sum = 0;
         int i = 0;
         int j = 0;
-
+        char ch = (char) (42);
         if (n > 0) {
-            for (i = 0; i < n; i++) {
+            for (i = 1; i < n; i++) {
                 System.out.println(stars);
                 for (j = 0; j < i; j++) {
                     System.out.print(stars);
                 }
-                System.out.print(stars);
             }
         }
 
-        return sum;
+        return ch;
     }
 
 
