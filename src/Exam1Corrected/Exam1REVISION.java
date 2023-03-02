@@ -1,8 +1,8 @@
-package Exam1;
+package Exam1Corrected;
 
 import java.util.Scanner;
 
-public class Exam1 {
+public class Exam1REVISION {
     public static char printTriangle(int n) {
         char stars = '*';
         char ch = (char) (42);
@@ -45,7 +45,7 @@ public class Exam1 {
                 String word = num.next();
                 System.out.printf("Error: Integer expected. You " +
                         "entered \"%s\"\n", word);
-                }
             }
         }
     }
+}
