@@ -21,10 +21,10 @@ public class StringPlay {
 
 
     public static boolean isAbecedarian(String s){
-        s.toLowerCase();
+        String lowcase = s.toLowerCase();
 
-        for (int i = 0; i < s.length() - 1; i++) {
-            if (s.charAt(i) >= s.charAt(i+1)) {
+        for (int i = 0; i < lowcase.length() - 1; i++) {
+            if (lowcase.charAt(i) >= lowcase.charAt(i+1)) {
                 return false;
             }
         }
