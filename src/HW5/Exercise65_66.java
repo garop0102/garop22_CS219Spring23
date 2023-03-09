@@ -55,13 +55,12 @@ public class Exercise65_66 {
 
         // canSpell tests
         System.out.println(canSpell("boot", "axobasrto"));
-        System.out.println("My Tests");
-        System.out.println();
         System.out.println(canSpell("happy", "hoayzpkpi"));
         System.out.println(!canSpell("zopo", "ziopg"));
 
         // Negative tests for canSpell
         System.out.println(!canSpell("hippo", "haxobapsrito"));
+        System.out.println(!canSpell("Steamrolled", "abcdefhijklmnop"));
 
     }
 
