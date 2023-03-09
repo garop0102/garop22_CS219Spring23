@@ -1,10 +1,8 @@
 package SwallowSpeeds;
 
+import Utility.MyArrays;
 import Utility.Util;
 
-import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -49,6 +47,7 @@ public class Main {
     }
 
 
+
     public static void main(String[] args) {
         // url for website
         String path =
@@ -60,6 +59,14 @@ public class Main {
         if (s != null) {
             double[] vec = loadSpeeds(s);
             System.out.println(Arrays.toString(vec));
+            MyArrays.printDoubles(vec);
+            System.out.println(MyArrays.mean(vec));
+            // test for mean function
+            System.out.println(MyArrays.mean(
+                    // this is an example of
+                    // an array literal syntax
+                    new double[] {1.0, 2.0, 3.0, 4.0}
+            ) == 2.5);
         }
     }
 
