@@ -61,12 +61,29 @@ public class Main {
             System.out.println(Arrays.toString(vec));
             MyArrays.printDoubles(vec);
             System.out.println(MyArrays.mean(vec));
+
             // test for mean function
             System.out.println(MyArrays.mean(
                     // this is an example of
                     // an array literal syntax
                     new double[] {1.0, 2.0, 3.0, 4.0}
             ) == 2.5);
+
+            // test for minimum value of array
+            System.out.println(MyArrays.min(
+                    new double[] {1.0, 2.0, 3.0, 4.0}
+            ) == 1.0);
+
+            // test for maximum value of array
+            System.out.println(MyArrays.max(
+                    // this is an example of
+                    // an array literal syntax
+                    new double[] {1.0, 2.0, 3.0, 4.0}
+            ) == 4.0);
+
+            // test for median value of an array
+            System.out.println(MyArrays.median(vec));
+            MyArrays.printDoubles(vec);
         }
     }
 

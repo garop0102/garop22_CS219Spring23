@@ -1,5 +1,7 @@
 package Utility;
 
+import java.util.Arrays;
+
 public class MyArrays {
     // function that returns the mean
     // value of an array
@@ -11,8 +13,47 @@ public class MyArrays {
         return total/ values.length;
     }
 
+    // function that return the
+    // largest value of an array
+    public static double max(double [] values){
+        // look for largest current value
+        double largest = values[0];
+        largest = Double.NEGATIVE_INFINITY;
+        for (double v : values){
+            if (v > largest){
+                largest = v;
+            }
+        }
+        return largest;
+    }
+
+    // function that returns the
+    // smallest value of an array
+    public static double min(double [] values){
+        double smallest = values[0];
+        // look for smallest current value
+        smallest = Double.POSITIVE_INFINITY;
+        for (double v: values){
+            if (v < smallest) {
+                smallest = v;
+            }
+        }
+        return smallest;
+    }
 
 
+    // function that returns the
+    // median value of an array
+    public static double median(double [] values){
+        Arrays.sort(values);
+
+        if (values.length % 2 == 1){
+            return values[values.length / 2];
+        }
+        else{
+            return (values[values.length / 2 ] + values[values.length / 2 - 1]) / 2;
+        }
+    }
 
 
 
