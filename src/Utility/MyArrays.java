@@ -45,13 +45,15 @@ public class MyArrays {
     // function that returns the
     // median value of an array
     public static double median(double [] values){
-        Arrays.sort(values);
+        double [] tmp = Arrays.copyOf(values, values.length);
+        Arrays.sort(tmp);
 
-        if (values.length % 2 == 1){
-            return values[values.length / 2];
+
+        if (tmp.length % 2 == 1){
+            return tmp[tmp.length / 2];
         }
         else{
-            return (values[values.length / 2 ] + values[values.length / 2 - 1]) / 2;
+            return (tmp[tmp.length / 2 ] + tmp[tmp.length / 2 - 1]) / 2;
         }
     }
 
