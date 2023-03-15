@@ -3,6 +3,33 @@ package Utility;
 import java.util.Arrays;
 
 public class MyArrays {
+
+    //function that shifts all the values of the
+    //starting at index i, left by 1 place
+    //filling in the last value as 0.
+    public static int [] shift(int [] values, int i){
+        for (int j = i; j < values.length - 1; j++){
+            values[j] = values[j + 1];
+        }
+        //assigns 0 to end of array
+        values[values.length - 1] = 0;
+        return values;
+    }
+
+
+
+
+
+
+    public static int indexOf(int [] values, int key){
+        for (int i = 0; i < values.length; i++){
+            if (values [i] == key){
+                return i;
+            }
+        }
+        return -1;
+    }
+
     // function that returns the mean
     // value of an array
     public static double mean(double [] values){
@@ -67,6 +94,22 @@ public class MyArrays {
         }
         System.out.print(values[values.length - 1]);
         System.out.println(']');
+    }
+
+    // tests for the array functions
+    public static void main(String[] args) {
+        int [] array = {4,7,6,9,1,7};
+        System.out.println(indexOf(array, 9) == 3);
+        System.out.println(indexOf(array,43) == -1);
+        System.out.println(indexOf(array,7) == 1);
+
+        shift(array, 2);
+        System.out.println(Arrays.toString(array)
+                .equals(Arrays.toString(new int [] {4,7,9,1,7,0})));
+
+        //compressed version of code above.
+        System.out.println(Arrays.compare(array,new int [] {4,7,9,1,7,0}) == 0);
+
     }
 } // class MyArrays
 
