@@ -138,6 +138,9 @@ public class HW6 {
 
         System.out.println(isAnagram("angered", "enraged"));
         System.out.println(!isAnagram("pizza", "sauce"));
+        System.out.println(isAnagram("THE MORSE CODE", "HERE COME DOTS"));
+        System.out.println(isAnagram("DuSty", "study"));
+        System.out.println(!isAnagram("night", "light"));
 
         int [] nums = {3, 5, 5, 5, 8, 21, 21, 23, 34, 39, 39, 40, 40, 40, 41};
         System.out.println(numDifferent(nums) == 9);
