@@ -147,6 +147,11 @@ public class HW6 {
 
         int [] nums2 = {1, 2, 11, 17, 19, 20, 23, 24, 25, 26, 31, 34, 37, 40, 41};
         System.out.println(numDifferent(nums2) == 15);
+
+        int [] nums3 = {1,1,1,1,1,1,1,1, 2, 11, 17, 19, 20, 23, 24, 25, 26, 31, 34, 37, 40, 41};
+        System.out.println(numDifferent(nums3) == 15);
+
+
     }
 
 }

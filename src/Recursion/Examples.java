@@ -18,6 +18,8 @@ public class Examples {
         System.out.println(sod(45193) == 22);
         System.out.println(pow(2,10) == 1024);
         System.out.println(pow(10,63));
+
     }
+
 }
 

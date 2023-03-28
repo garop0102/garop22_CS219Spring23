@@ -51,6 +51,10 @@ public class Main {
     public static double [] loadSpeeds(Scanner s){
         // define an array of doubles
         // this type is a primitive array.
+
+        // primitive array: means we have to
+        // exactly how many items it needs
+        // when we declare it.
         double [] speeds = new double[18];
 
         // website states it only wants
