@@ -46,7 +46,7 @@ public class Practice4 {
     }
     public static boolean areFactors(int n, int [] array){
         for (int num : array)
-            if (num % 2 != 0)
+            if (num % n != 0)
                 return false;
         return true;
     }
