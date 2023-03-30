@@ -31,6 +31,7 @@ public class HW6 {
      */
     public static boolean hasDuplicate(String [] aos) {
         for (String ao : aos) {
+            ao = ao.toLowerCase();
             for (int j = 1; j < aos.length; j++) {
                 if (ao.equals(aos[j])) {
                     return true;
