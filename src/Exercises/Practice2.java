@@ -2,6 +2,7 @@ package Exercises;
 
 import java.lang.reflect.Array;
 import java.util.Scanner;
+import java.util.random.*;
 
 public class Practice2 {
     public static int countDigits(int n){
@@ -37,6 +38,30 @@ public class Practice2 {
 
 
         return large;
+    }
+
+
+
+    //if __name__ == '__main__':
+      //      # Load palindrome words and print in reverse alphabetical order
+        //    palindrome_words = Exam.load_words()
+    //palindrome_words.sort(reverse=True)
+    //print(palindrome_words)
+
+
+    public static String jumble(String word) {
+        // Convert the word to an array of characters
+        char[] chars = word.toCharArray();
+        // Shuffle the array using the Fisher-Yates shuffle algorithm
+        Random rand = new Random();
+        for (int i = chars.length - 1; i > 0; i--) {
+            int j = rand.nextInt(i + 1);
+            char temp = chars[i];
+            chars[i] = chars[j];
+            chars[j] = temp;
+        }
+        // Convert the shuffled array back to a string
+        return new String(chars);
     }
 
 
