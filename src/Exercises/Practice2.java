@@ -53,9 +53,9 @@ public class Practice2 {
         // Convert the word to an array of characters
         char[] chars = word.toCharArray();
         // Shuffle the array using the Fisher-Yates shuffle algorithm
-        Random rand = new Random();
+        //Random rand = new Random();
         for (int i = chars.length - 1; i > 0; i--) {
-            int j = rand.nextInt(i + 1);
+           // int j = rand.nextInt(i + 1);
             char temp = chars[i];
             chars[i] = chars[j];
             chars[j] = temp;
