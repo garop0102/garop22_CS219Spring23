@@ -1,6 +1,7 @@
 package Exercises;
 
-public class Practice3 {
+public class
+Practice3 {
 
     //Returns the first character of the given String.
     public static char first(String s) {

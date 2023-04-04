@@ -57,8 +57,8 @@ public class Practice2 {
         for (int i = chars.length - 1; i > 0; i--) {
            // int j = rand.nextInt(i + 1);
             char temp = chars[i];
-            chars[i] = chars[j];
-            chars[j] = temp;
+           // chars[i] = chars[j];
+           // chars[j] = temp;
         }
         // Convert the shuffled array back to a string
         return new String(chars);
