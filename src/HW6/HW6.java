@@ -30,12 +30,13 @@ public class HW6 {
      *  Hint 2: Use a nested loop
      */
     public static boolean hasDuplicate(String [] aos) {
-        for (String ao : aos) {
-            ao = ao.toLowerCase();
-            for (int j = 1; j < aos.length; j++) {
-                if (ao.equals(aos[j])) {
-                    return true;
-                }
+        for (int i = 0; i < aos.length; i++){
+            aos[i] = aos[i].toLowerCase();
+            for (int j = 0; j < aos.length; j++){
+                aos[j] = aos[j].toLowerCase();
+                if (i != j)
+                    if (aos[i].equals(aos[j]))
+                        return true;
             }
         }
         return false;

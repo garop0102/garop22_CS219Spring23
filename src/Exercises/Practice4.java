@@ -8,20 +8,6 @@ import java.util.Arrays;
 
 public class Practice4 {
 
-    public static boolean hasDuplicate(String [] s){
-        for (String ao : s){
-            int count = 0;
-            ao = ao.toLowerCase();
-            for (int j = 0; j < s.length; j++){
-                s[j] = s[j].toLowerCase();
-                if (ao.equals(s[j]))
-                    count++;
-                if (count == 2)
-                    return true;
-            }
-        }
-        return false;
-    }
 
     public static int mus(int[] zoo) {
         int fus = 0;
@@ -44,6 +30,13 @@ public class Practice4 {
         }
         return a;
     }
+
+    public int[] swapEnds(int[] nums) {
+        nums[0] = nums[nums.length-1];
+
+
+        return nums;
+    }
     public static boolean areFactors(int n, int [] array){
         for (int num : array)
             if (num % n != 0)
@@ -51,11 +44,22 @@ public class Practice4 {
         return true;
     }
 
+    public static boolean hasDuplicate2(String [] s){
+        for (int i = 0; i < s.length; i++){
+            s[i] = s[i].toLowerCase();
+            for (int j = 0; j < s.length; j++){
+                s[j] = s[j].toLowerCase();
+                if (i != j)
+                    if (s[i].equals(s[j]))
+                        return true;
+            }
+        }
+        return false;
+    }
 
 
     public static void main(String[] args) {
-        String [] aos = {"Harry", "Mary", "Larry", "Gerry", "Terry", "mary"};
-        System.out.println(hasDuplicate(aos));
+        String [] aos = {"Harry", "Mary", "Larry", "Gerry", "Terry", "John"};
 
         int[] bob = make(5);
         dub(bob);
@@ -64,6 +68,8 @@ public class Practice4 {
 
         int [] a = {2,4,6,8,10};
         System.out.println(areFactors(2,a));
+
+        System.out.println(hasDuplicate2(aos));
 
 
 

@@ -16,8 +16,11 @@ public class Examples {
     public static long pow(int x, int y) {
         if (y == 0)
             return 1;
+        else if (y % 2 == 0){
+            return (long) Math.pow(pow(x,y/2), 2);
+    }
         else
-            return pow(x, y - 1) * x;
+            return pow(x,y - 1) * x;
     }
 
 
@@ -111,7 +114,10 @@ public class Examples {
     public static void main(String[] args) {
         System.out.println(sod(45193) == 22);
 
+        System.out.println("Recursive Test.");
+        System.out.println();
         System.out.println(pow(2,10) == 1024);
+        System.out.println(pow(3,5));
         System.out.println(pow(10,63));
 
         System.out.println(count7s(70773));
@@ -143,6 +149,10 @@ public class Examples {
         System.out.println(words.size());
 
         System.out.println(bsearch(words, "abib", 0, words.size() - 1));
+
+
+
+
 
     }
 
