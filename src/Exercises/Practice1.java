@@ -28,6 +28,9 @@ public class Practice1 {
 
 
 
+
+    // prints the lyrics of "beer on the wall"
+    // based on the given integer parameter of n.
     public static void beerLyrics(int n){
         if (n == 0)
             System.out.println("""
