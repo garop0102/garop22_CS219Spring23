@@ -2,8 +2,7 @@ package ZipCodes;
 
 import Utility.Util;
 
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 public class ZipCodeDB {
     private ArrayList<ZipCode> codes;
@@ -36,8 +35,11 @@ public class ZipCodeDB {
 
             codes.add(code);
         }
+        //Collections.sort(codes);
     } // load
 
+    // TODO what if there was more than one entry for a code?
+    // Have it return an array of ZipCode objects.
     public ZipCode findByZip (String code){
         for (ZipCode zc: this.codes){
             if (zc.getCode().equals(code))
