@@ -25,7 +25,19 @@ public class Coordinate {
     }
 
     public double dist(Coordinate that){
-        return 3958.80 * Math.acos(Math.cos(this.lat) * Math.cos(that.lat)
-                * Math.cos(this.lng - that.lng) + Math.sin(this.lat) * Math.sin(that.lat));
+        double x =
+                Math.pow(
+                        Math.sin(
+                                Math.toRadians(
+                                        this.lat - that.lat)/2), 2) +
+                        Math.cos(Math.toRadians(that.lat)) *
+                                Math.cos(Math.toRadians(this.lat)) *
+                                Math.pow(
+                                        Math.sin(
+                                                Math.toRadians(
+                                                        this.lng - that.lng)/2), 2);
+        double y = 2*Math.atan2(Math.sqrt(x), Math.sqrt(1 -x));
+        final int R = 6371000;
+        return R * y / 1000;
     }
 }

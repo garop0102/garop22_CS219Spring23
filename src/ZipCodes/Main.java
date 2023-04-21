@@ -9,10 +9,10 @@ public class Main {
 
         // create zipcode object for Canton.
         ZipCode z1 = new ZipCode("13617", "NY", "Canton",
-                new Coordinate(75.1,44.6));
+                new Coordinate(75.16,44.59));
 
         ZipCode z2 = new ZipCode("13676", "NY", "Potsdam",
-                new Coordinate(74.9,44.6));
+                new Coordinate(71.02,42.38));
 
         System.out.println(z1.getCoord()
                 .dist(z2.getCoord()));
@@ -21,5 +21,8 @@ public class Main {
         // create ZipCodeDB object.
         ZipCodeDB db = new ZipCodeDB();
         db.load();
+        System.out.println(db.findByZip("13203"));
+        db.findDuplicates();
+        return;
     }
 }
