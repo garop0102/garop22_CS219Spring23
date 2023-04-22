@@ -35,7 +35,7 @@ public class ZipCodeDB {
 
             codes.add(code);
         }
-        //Collections.sort(codes);
+        Collections.sort(codes);
     } // load
 
     // TODO what if there was more than one entry for a code?
@@ -47,6 +47,18 @@ public class ZipCodeDB {
         }
         return null;
     }
+
+    //TODO return an arraylist of zipcodes that match code.
+    public ZipCode bsearch(String code){
+        int pos = Collections.binarySearch(codes,
+                new ZipCode(code, "","",0,0));
+
+        if (pos == -1)
+            return null;
+        else
+            return codes.get(pos);
+    }
+
 
     public void findDuplicates (){
         for (int i = 0; i < codes.size() - 1; i++){
