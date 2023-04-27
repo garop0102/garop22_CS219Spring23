@@ -12,17 +12,17 @@ public class Main {
                 , "1207 Skittles Ave","Los Angeles","CA","90032",3240596.50,8);
 
 
-        System.out.println(b1);
+
         System.out.println(b1.credit(50));
         System.out.println(b1.debit(30));
         System.out.println(b1.debit(3000) == 0.0);
 
-        System.out.println(b2);
+
         System.out.println(b2.credit(150.20));
         System.out.println(b2.debit(75.60));
         System.out.println(b2.debit(2000) == 0.0);
 
-        System.out.println(b3);
+
         System.out.println(b3.credit(700.03));
         System.out.println(b3.debit(90.34));
         System.out.println(b3.debit(50000000) == 0.0);
