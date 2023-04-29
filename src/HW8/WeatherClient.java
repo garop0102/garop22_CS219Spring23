@@ -30,10 +30,10 @@ public class WeatherClient implements WeatherClientInterface {
         // plow through the text file
         while (s.hasNextLine()){
             String line =  s.nextLine();
-            if (!line.contains("cloudsCod") && line.contains("clouds"))
+            if (!line.contains("cloudsCode") && line.contains("clouds"))
                 cloud = line.substring(line.indexOf("",12),line.length() - 1);
             if (line.contains("temperature")) {
-                temp = Double.parseDouble(line.substring(line.indexOf("", 18), 20));
+                temp = Double.parseDouble(line.substring(18,line.length() - 2));
                 temp = Double.parseDouble(String.valueOf(temp = ((9.0 / 5.0) * temp) + 32));
             }
             if (line.contains("humidity"))
