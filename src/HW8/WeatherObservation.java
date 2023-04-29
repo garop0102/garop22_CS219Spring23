@@ -47,7 +47,7 @@ public class WeatherObservation {
     public String toString() {
         return String.format("""
                 The temperature in %s, %s is %s degrees fahrenheit
-                Wind speed is %s knots, humidity %s
+                Wind speed is %s knots, humidity percentage is %s
                 Cloud cover: %s""",city,state,temp,wind,humidity,cloud);
     }
 

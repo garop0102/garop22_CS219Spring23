@@ -7,6 +7,21 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        prompt();
+    }
+
+
+
+
+
+    public static void errorCheck (String s){
+        System.out.printf("""
+                Error: zip code %s not found.
+                Error: Enter a valid zip code
+                """, s);
+        System.exit(0);
+    }
+    public static void prompt(){
         System.out.println("Type \"quit\" to end the program.");
         Scanner obj = new Scanner(System.in);
         System.out.print("Enter a zipcode> ");
@@ -25,13 +40,5 @@ public class Main {
                 break;
             }
         }
-    }
-
-    public static void errorCheck (String s){
-        System.out.printf("""
-                Error: zip code %s not found.
-                Error: Enter a valid zip code
-                """, s);
-        System.exit(0);
     }
 }
