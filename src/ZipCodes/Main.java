@@ -18,6 +18,11 @@ public class Main {
                 .dist(z2.getCoord()));
         System.out.println(z1.dist(z2));
 
+        System.out.println("COORD");
+        System.out.println(z1.getCoord());
+        System.out.println(z1.getCoord().toString().substring(15,21));
+        System.out.println(z1.getCoord().toString().substring(27,32));
+
         // create ZipCodeDB object.
         ZipCodeDB db = new ZipCodeDB();
         db.load();

@@ -21,6 +21,10 @@ public class ZipCode implements Comparable<ZipCode>{
 
     }
 
+    public ZipCode(ZipCode byZip) {
+
+    }
+
     public String getCode() {
         return code;
     }

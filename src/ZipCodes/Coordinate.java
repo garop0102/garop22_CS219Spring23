@@ -11,7 +11,7 @@ public class Coordinate {
     @Override
     public String toString() {
         return "Coordinate{" +
-                "lng=" + lng +
+                "lng=" + -lng +
                 ", lat=" + lat +
                 '}';
     }

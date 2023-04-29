@@ -1,5 +1,7 @@
 package Utility;
 
+import ZipCodes.Coordinate;
+
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;

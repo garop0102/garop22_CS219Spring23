@@ -15,7 +15,7 @@ public class ZipCodeDB {
     public void load (){
         Scanner s = Util.openSite("http://10.60.15.25/~ehar/cs219/zips.txt");
 
-        // if code doens't properly read the text file.
+        // if code doesn't properly read the text file.
         if (s == null){
             System.out.println("Error: couldn't open site. ");
             return;
